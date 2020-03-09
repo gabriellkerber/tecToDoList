@@ -1,0 +1,10 @@
+<h1>TODO LIST</h1>
+
+<input type="text" placeholder="Digite a sua tarefa" [(ngModel)]="todo">
+<button (click)="addTodoInTodos()" [disabled]="todo === ''">OK</button>
+
+<ul *ngFor="let t of todos; let i = index">
+    <li>{{ t.todo }} {{ t.done ? '✔️' : '✖️' }} </li> 
+    <label>Feito: <input type="checkbox" [(ngModel)]="t.done"></label><br>
+    <button (click)="del(i)">Deletar</button>
+</ul>
