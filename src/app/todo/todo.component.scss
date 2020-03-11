@@ -1,0 +1,21 @@
+
+h1, .tar, .btnCriar{
+    text-align:center;
+    display: block;
+    margin: 15px auto;
+    
+}
+body{
+    width: 50%;
+    height: 80%;
+    border: solid 2px;
+    margin: 0 auto;
+    background-color: #e0d5a0;
+}
+ul{
+    display: flex;
+    margin-left: 15px;
+    input, li ,button{
+        margin-left: 20px;
+    }
+}

@@ -6,21 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
-  todos = []
-  todo = ''
+  tarefas = []
+  input = ''
 
   constructor() { }
 
-  addTodoInTodos() {
-    this.todos.push({
-      todo: this.todo,
-      done: false
-    })
-    this.todo = ''
+  addTarefas() {
+    this.tarefas.push({ input: this.input,feito: false})
+    this.input = ''
   }
 
   del(index) {
-    this.todos.splice(index, 1)
+    this.tarefas.splice(index, 1)
   }
 
   ngOnInit(): void {

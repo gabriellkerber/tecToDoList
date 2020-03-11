@@ -1,10 +1,15 @@
-<h1>TODO LIST</h1>
+<body>
+<h1>Minha Lista</h1>
 
-<input type="text" placeholder="Digite a sua tarefa" [(ngModel)]="todo">
-<button (click)="addTodoInTodos()" [disabled]="todo === ''">OK</button>
+<input type="text"  class="tar" placeholder="Digite a sua tarefa" 
+[(ngModel)]="input" (keyup.enter)="addTarefas()" (blur)="addTarefas()">
 
-<ul *ngFor="let t of todos; let i = index">
-    <li>{{ t.todo }} {{ t.done ? '✔️' : '✖️' }} </li> 
-    <label>Feito: <input type="checkbox" [(ngModel)]="t.done"></label><br>
-    <button (click)="del(i)">Deletar</button>
+<button (click)="addTarefas()" [disabled]="input === '' " class="btnCriar">OK</button>
+<section>
+<ul *ngFor="let tarefa of tarefas; let i = index">
+    <input type="checkbox" [(ngModel)]="tarefa.feito">
+    <li [style]="tarefa.feito ? 'color: green' : 'color: red'" >{{ tarefa.input }}</li> 
+    <button (click)="del(i)" class="btnDel">Deletar</button>
 </ul>
+</section>
+</body>
