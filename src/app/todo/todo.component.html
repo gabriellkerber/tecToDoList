@@ -1,3 +1,4 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <body>
 <h1>Minha Lista</h1>
 
@@ -9,7 +10,8 @@
 <ul *ngFor="let tarefa of tarefas; let i = index">
     <input type="checkbox" [(ngModel)]="tarefa.feito">
     <li [style]="tarefa.feito ? 'color: green' : 'color: red'" >{{ tarefa.input }}</li> 
-    <button (click)="del(i)" class="btnDel">Deletar</button>
+    <fa-icon [icon]="faBan" (click)="del(i)" class="btnDel"></fa-icon>
+    
 </ul>
 
 </section>

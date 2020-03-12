@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBan } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todo',
@@ -8,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class TodoComponent implements OnInit {
   tarefas = []
   input = ''
+  faBan = faBan;
 
   constructor() { }
 
   addTarefas() {
+    if(this.input !== ""){
     this.tarefas.push({ input: this.input,feito: false})
-    this.input = ''
+    this.input = ''}
   }
 
   del(index) {
