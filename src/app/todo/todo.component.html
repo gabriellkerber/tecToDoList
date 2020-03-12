@@ -5,7 +5,7 @@
 <input type="text"  class="tar" placeholder="Digite a sua tarefa" 
 [(ngModel)]="input" (keyup.enter)="addTarefas()" (blur)="addTarefas()">
 
-<button (click)="addTarefas()" [disabled]="input === '' " class="btnCriar">OK</button>
+<button (click)="addTarefas()" [disabled]="input === '' " class="btnCriar">Criar</button>
 <section>
 <ul *ngFor="let tarefa of tarefas; let i = index">
     <input type="checkbox" [(ngModel)]="tarefa.feito">
